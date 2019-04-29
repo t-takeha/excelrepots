@@ -1,0 +1,20 @@
+# デバッグモード
+debug: false
+
+# ロガー設定
+logging:
+  level:
+    org:
+      springframework:
+        jdbc: debug
+
+# Springの設定
+spring:
+  main:
+    banner-mode: "off"
+  batch:
+    job:
+      # デフォルトでは、Springは存在するジョブをすべて実行してしまうため、それを止める設定を入れる
+      enabled: false
+      # メタデータを作成させない
+    initialize-schema: EMBEDDED
